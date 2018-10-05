@@ -1,6 +1,10 @@
 public class TCavalluzziLib {
 
-
+/**
+ * checks to see if a word is spelled the same way normally and backwards
+ * @param word
+ * @return a boolean value
+ */
 
     public static boolean isPalindrome (String word)
     {
@@ -32,7 +36,11 @@ public class TCavalluzziLib {
         return false;
     }
 
-
+    /**
+     * converts a date in the american format to the european format
+     * @param date inputted date in the mm/dd/yyyy format
+     * @return a string with the date in a dd-mm-yyyy format
+     */
 
 
     public static String dateStr (String date)
@@ -74,7 +82,11 @@ public class TCavalluzziLib {
         return euDate;
     }
 
-
+    /**
+     * adds the sum of all numbers up to the integer, inclusive
+     * @param num the number that will be the final one added to the sum
+     * @return the sum of all the numbers up to and including the inputted number
+     */
 
 
 
@@ -90,7 +102,7 @@ public class TCavalluzziLib {
             if(num>0)
             {
                 //as long as the index remains below the number, it will continue to increment up and add itself to the sum each time
-                for(int index = 1; index<num;index++)
+                for(int index = 1; index<=num;index++)
                 {
                     sum = sum + index;
                 }
@@ -111,15 +123,14 @@ public class TCavalluzziLib {
     }
 
 
+    /**
+     * prints the product of the base and every integer up to the range
+     * @param base the integer being multiplied by every integer up to the range
+     * @param range the final integer the base will be multiplied by
+     */
 
 
-
-
-
-    //THIS IS A BOOLEAN RIGHT NOW, IT SHOULD BE VOID, FIND OUT HOW TO CALL VOID METHODS
-
-
-    public static boolean multiplicationTable (int base, int range)
+    public static void multiplicationTable (int base, int range)
     {
         //checks to see if the range is positive or negative to avoid missing the for loop
         if (range>0)
@@ -139,6 +150,21 @@ public class TCavalluzziLib {
             }
         }
 
-        return true;
+    }
+
+
+    /**
+     * removes the first instance of subStr in the mainStr
+     * @param mainStr the thing that will have the first instance of subStr removed from it
+     * @param subStr the thing that will be removed from the first instance of the mainStr
+     * @return the mainStr with the first instance of subStr removed
+     */
+
+
+    public static String cutOut (String mainStr, String subStr)
+    {
+        String strFront = mainStr.substring(0,mainStr.indexOf(subStr));
+        String strBack = mainStr.substring(mainStr.indexOf(subStr)+subStr.length(),mainStr.length());
+        return strFront + strBack;
     }
 }

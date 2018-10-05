@@ -2,9 +2,18 @@ public class testFile {
 
  public static void main(String[] args)
  {
-     System.out.println(TCavalluzziLib.multiplicationTable(6,-10));
+     //to run one of the methods, just remove the two slashes before the line and then run
+
+
+     //System.out.println(TCavalluzziLib.sumUpTo(6));
+
+     //System.out.println(TCavalluzziLib.isPalindrome("tacocat"));
+
+     //System.out.println(TCavalluzziLib.dateStr("12/03/2001"));
+
+     //TCavalluzziLib.multiplicationTable(12,12);
+
+     //System.out.println(TCavalluzziLib.cutOut("catatonic cat","cat"));
  }
-
-
 }
 
