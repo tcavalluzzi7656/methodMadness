@@ -2,7 +2,7 @@ public class TCavalluzziLib {
 
 /**
  * checks to see if a word is spelled the same way normally and backwards
- * @param word
+ * @param word the word that will be checked to see if it is a palindrome
  * @return a boolean value
  */
 
