@@ -1,4 +1,6 @@
 public class TCavalluzziLib {
+    //Thomas Cavalluzzi
+
 
 /**
  * checks to see if a word is spelled the same way normally and backwards
