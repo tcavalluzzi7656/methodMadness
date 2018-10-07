@@ -113,7 +113,7 @@ public class TCavalluzziLib {
             else
             {
                 //as long as the index remains above the number, it will continue to increment down and add itself to the sum each time
-                for(int index = -1; index>num;index--)
+                for(int index = -1; index>=num;index--)
                 {
                     sum = sum + index;
                 }
@@ -165,8 +165,16 @@ public class TCavalluzziLib {
 
     public static String cutOut (String mainStr, String subStr)
     {
+        //if subStr is not in mainStr, mainStr is returned as it was inputted
+        if (mainStr.indexOf(subStr) == -1)
+        {
+            return mainStr;
+        }
+        //selects the part of the string before the part that will be removed
         String strFront = mainStr.substring(0,mainStr.indexOf(subStr));
-        String strBack = mainStr.substring(mainStr.indexOf(subStr)+subStr.length(),mainStr.length());
+        //selects the part of the string after the part that will be removed
+        String strBack = mainStr.substring(mainStr.indexOf(subStr)+subStr.length());
+        //adds and returns the parts of the string before and after the word that is removed
         return strFront + strBack;
     }
 }
